@@ -3,4 +3,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-    return HttpResponse('<h1>my application</h1><h1>my application</h1><h1>my application</h1>')
+    return render(request, 'index.html')
+
+def basefile(request):
+    return render(request, "partials/base.html")
